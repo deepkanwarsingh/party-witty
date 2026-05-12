@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import facecard_img from '../assets/Facecard_img.jpg';
+import profile_bottom_stage from '../assets/profile_bottom_stage.png';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -69,7 +70,7 @@ const Sidebar = () => {
 
         <div className={`flex items-center gap-3 bg-white/50 rounded-2xl transition-all duration-300 ${isCollapsed ? 'p-2 justify-center' : 'p-3'}`}>
           <div className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden shrink-0">
-            <img src={facecard_img} alt="User" className="w-full h-full object-cover" />
+            <img src={profile_bottom_stage} alt="User" className="w-full h-full object-cover" />
           </div>
           {!isCollapsed && (
             <div className="flex flex-col grow min-width-0 overflow-hidden">
