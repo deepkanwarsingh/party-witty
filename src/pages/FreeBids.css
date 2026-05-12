@@ -1,0 +1,17 @@
+.page-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, rgba(243, 232, 255, 0.5), transparent),
+              radial-gradient(circle at bottom right, rgba(250, 232, 255, 0.5), transparent);
+}
+
+.main-content {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}

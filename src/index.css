@@ -1,0 +1,61 @@
+:root {
+  --brand-purple: #7c3aed;
+  --brand-pink: #ff4d94;
+  --brand-gradient: linear-gradient(135deg, #aa3bff 0%, #ff4d94 100%);
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-main: #fcfaff;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  font: 16px/1.5 var(--sans);
+  color: var(--text-main);
+  background: var(--bg-main);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #f3e8ff, transparent),
+              radial-gradient(circle at bottom right, #fae8ff, transparent);
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
