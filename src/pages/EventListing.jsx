@@ -3,6 +3,9 @@ import Sidebar from '../components/Sidebar';
 import EventCard from '../components/EventCard';
 import RightSidebar from '../components/RightSidebar';
 import './EventListing.css';
+import Zoe_miller from '../assets/Zoe_miller.jpg';
+import MakeYourFirstMove from '../assets/MakeYourFirstMove.png';
+
 
 const EventListing = () => {
     return (
@@ -19,7 +22,7 @@ const EventListing = () => {
                             <div className="plan-pill glass">
                                 <span className="pill-text">Pick a plan you'd both enjoy</span>
                                 <div className="profile-small">
-                                    <img src="" alt="Zoe Miller" />
+                                    <img src={Zoe_miller} alt="Zoe Miller" />
                                     <span className="profile-name">Zoe Miller, 22</span>
                                     <div className="verified-mini">
                                         <svg viewBox="0 0 24 24" width="10" height="10" fill="white">
@@ -31,7 +34,7 @@ const EventListing = () => {
 
                             <div className="user-status glass">
                                 <div className="status-profile">
-                                    <img src="" alt="Alen Markram" />
+                                    <img src={MakeYourFirstMove} alt="Alen Markram" />
                                     <div className="status-info">
                                         <span className="status-name">Alen Markram</span>
                                         <button className="verify-btn-mini">Get Verified</button>
