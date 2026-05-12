@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import DrinkCard from '../components/DrinkCard';
 import './BuyDrinks.css';
+import facecard_img from '../assets/Facecard_img.jpg';
 
 const BuyDrinks = () => {
     const drinks = [
@@ -39,7 +40,7 @@ const BuyDrinks = () => {
                             <img src="" alt="Selection" className="preview-bg-image" />
                             <div className="preview-overlay">
                                 <div className="zoe-mini-profile">
-                                    <img src="" alt="Zoe Miller" />
+                                    <img src={facecard_img} alt="Zoe Miller" />
                                     <div className="zoe-meta">
                                         <h4>Zoe Miller, 22</h4>
                                         <p>Nocturne Rooftop</p>

@@ -1,23 +1,24 @@
 import React from 'react';
 import './FaceCard.css';
-
+import facecard_img from '../assets/Facecard_img.jpg';
 const FaceCard = () => {
   return (
     <div className="face-card-container">
       <button className="explore-btn">EXPLORE FEED</button>
-      
+
       <div className="card-wrapper">
         <div className="face-card">
           <div className="image-container">
-            <img src="" alt="Zoe Miller" className="profile-image" />
+            <div className="vibes-tag">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              Matches Your Vibe
+            </div>
+            <img src={facecard_img} alt="Zoe Miller" className="profile-image" />
             <div className="overlay">
-              <div className="vibes-tag">
-                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2">
-                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                 </svg>
-                 Matches Your Vibe
-              </div>
-              
+
+
               <div className="profile-details">
                 <div className="profile-header">
                   <h2 className="name">Zoe Miller, 22</h2>
@@ -28,9 +29,9 @@ const FaceCard = () => {
                   </div>
                   <button className="mate-btn">+ Mate</button>
                 </div>
-                
+
                 <p className="mutuals">4 Mutual Mates</p>
-                
+
                 <div className="tags">
                   <span className="tag">Bollywood Nights</span>
                   <span className="tag">Chill Crowd</span>
@@ -47,12 +48,12 @@ const FaceCard = () => {
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
-          
+
           <button className="action-btn go-tonight">
-             <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
-                <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4.2 6.4c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zm12.8 11.2c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zM4.2 17.6c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8zm15.6-11.2c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8z" />
-             </svg>
-             Go Tonight
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
+              <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4.2 6.4c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zm12.8 11.2c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zM4.2 17.6c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8zm15.6-11.2c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8z" />
+            </svg>
+            Go Tonight
           </button>
 
           <button className="action-btn like">

@@ -1,5 +1,7 @@
 import React from 'react';
 import './RightSidebar.css';
+import HowitWorks from '../assets/HowitWorks.jpg';
+import MakeYourFirstMove from '../assets/MakeYourFirstMove.png';
 
 const RightSidebar = () => {
   const steps = [
@@ -19,7 +21,7 @@ const RightSidebar = () => {
     <aside className="right-sidebar glass">
       <div className="user-header">
         <div className="profile-avatar">
-          <img src="" alt="Profile" />
+          <img src={MakeYourFirstMove} alt="Profile" />
         </div>
         <h3>Make Your First Move</h3>
         <p className="subtitle">Verify your profile to start sending invites and offering drinks.</p>
@@ -31,13 +33,13 @@ const RightSidebar = () => {
           {steps.map((step) => (
             <div key={step.id} className="step-item">
               <div className="step-thumb">
-                 <img src="" alt={`Step ${step.id}`} />
-                 <span className="step-badge">{step.id}</span>
-                 <div className="step-icon">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
-                    </svg>
-                 </div>
+                <img src={HowitWorks} alt={`Step ${step.id}`} />
+                <span className="step-badge">{step.id}</span>
+                <div className="step-icon">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
               </div>
               <div className="step-info">
                 <h5>{step.title}</h5>

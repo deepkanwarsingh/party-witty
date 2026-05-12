@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import facecard_img from '../assets/Facecard_img.jpg';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -52,13 +53,13 @@ const Sidebar = () => {
 
         {!isCollapsed && (
           <div className="promo-card">
-            <img src="" alt="Promo Banner" className="promo-img" />
+            <img src={facecard_img} alt="Promo Banner" className="promo-img" />
           </div>
         )}
 
         <div className="user-profile">
           <div className="user-avatar">
-            <img src="" alt="User" />
+            <img src={facecard_img} alt="User" />
           </div>
           {!isCollapsed && (
             <div className="user-info">

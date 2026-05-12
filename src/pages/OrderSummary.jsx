@@ -1,5 +1,6 @@
 import React from 'react';
 import './OrderSummary.css';
+import facecard_img from '../assets/Facecard_img.jpg';
 
 const OrderSummary = () => {
   return (
@@ -35,7 +36,7 @@ const OrderSummary = () => {
             
             <div className="user-highlight-row">
               <div className="user-img-large">
-                <img src="" alt="Zoe Miller" />
+                <img src={facecard_img} alt="Zoe Miller" />
               </div>
               <div className="user-meta-info">
                 <h4>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './EventCard.css';
+import facecard_img from '../assets/Facecard_img.jpg';
 
 const EventCard = () => {
   return (
@@ -30,7 +31,7 @@ const EventCard = () => {
       <div className="card-bottom">
         <div className="visitor-pill">
            <div className="mini-avatar">
-              <img src="" alt="User" />
+              <img src={facecard_img} alt="User" />
            </div>
            <span>Zoya has been here twice</span>
         </div>
