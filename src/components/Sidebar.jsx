@@ -16,7 +16,7 @@ const Sidebar = () => {
 
   return (
     <aside className={`glass z-10 transition-[width] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] relative flex flex-col p-6 box-border h-screen ${isCollapsed ? 'w-[88px]' : 'w-[260px]'}`}>
-      <button 
+      <button
         className={`absolute -right-[17px] top-8 w-[34px] h-[34px] p-0 z-20 flex items-center justify-center transition-transform duration-300 cursor-pointer ${isCollapsed ? 'rotate-180' : ''}`}
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
@@ -37,10 +37,10 @@ const Sidebar = () => {
 
       <nav className="flex flex-col gap-2 grow overflow-y-auto scrollbar-none">
         {navItems.map((item) => (
-          <a 
-            key={item.name} 
-            href={`#${item.name.toLowerCase().replace(/\s/g, '-')}`} 
-            className={`flex items-center gap-4 py-3 rounded-xl text-gray-500 font-medium transition-all duration-200 whitespace-nowrap hover:bg-violet-500/5 hover:text-[#7c3aed] ${isCollapsed ? 'px-3 justify-center' : 'px-4'}`} 
+          <a
+            key={item.name}
+            href={`#${item.name.toLowerCase().replace(/\s/g, '-')}`}
+            className={`flex items-center gap-4 py-3 rounded-xl text-gray-500 font-medium transition-all duration-200 whitespace-nowrap hover:bg-violet-500/5 hover:text-[#7c3aed] ${isCollapsed ? 'px-3 justify-center' : 'px-4'}`}
             title={item.name}
           >
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
