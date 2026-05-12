@@ -1,7 +1,7 @@
 import React from 'react';
 import facecard_img from '../assets/Facecard_img.jpg';
 
-const FaceCard = () => {
+const FaceCard = ({ onGoTonight }) => {
   return (
     <div className="grow flex flex-col items-center p-6 gap-6">
       <button className="bg-[#7c3aed] text-white px-6 py-2.5 rounded-full font-semibold text-sm tracking-wider">
@@ -37,9 +37,9 @@ const FaceCard = () => {
                 <p className="text-[13px] opacity-80 mb-4">4 Mutual Mates</p>
 
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20">Bollywood Nights</span>
-                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20">Chill Crowd</span>
-                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20">Party Regular</span>
+                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20 whitespace-nowrap">Bollywood Nights</span>
+                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20 whitespace-nowrap">Chill Crowd</span>
+                  <span className="bg-white/10 backdrop-blur-[4px] px-3 py-1.5 rounded-full text-[11px] border border-white/20 whitespace-nowrap">Party Regular</span>
                 </div>
               </div>
             </div>
@@ -53,7 +53,10 @@ const FaceCard = () => {
             </svg>
           </button>
 
-          <button className="w-auto px-7 h-14 rounded-full bg-linear-to-br from-[#aa3bff] to-[#ff4d94] text-white font-semibold text-base flex items-center gap-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+          <button 
+            onClick={onGoTonight}
+            className="w-auto px-7 h-14 rounded-full bg-linear-to-br from-[#aa3bff] to-[#ff4d94] text-white font-semibold text-base flex items-center gap-2.5 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:scale-105 active:scale-95 transition-all"
+          >
             <svg viewBox="0 0 24 24" width="20" height="20" fill="white">
               <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4.2 6.4c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zm12.8 11.2c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8-.8.8-2 .8-2.8 0zM4.2 17.6c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8zm15.6-11.2c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0 .8.8.8 2 0 2.8z" />
             </svg>

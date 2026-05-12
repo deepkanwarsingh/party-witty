@@ -2,7 +2,7 @@ import React from 'react';
 import HowitWorks from '../assets/HowitWorks.jpg';
 import MakeYourFirstMove from '../assets/MakeYourFirstMove.png';
 
-const RightSidebar = () => {
+const RightSidebar = ({ onVerify }) => {
   const steps = [
     { id: 1, title: 'Spot Your Person', desc: "Pick someone you'd genuinely enjoy going out with." },
     { id: 2, title: 'Send a Drink', desc: "Offer their first drink your way of saying let's go out." },
@@ -65,7 +65,10 @@ const RightSidebar = () => {
       </div>
 
       <div className="flex flex-col gap-3 mt-auto pt-4">
-        <button className="w-full bg-[#7c3aed] text-white py-3.5 rounded-full font-bold text-[15px] shadow-lg shadow-violet-500/20 hover:bg-violet-600 transition-colors">
+        <button 
+          onClick={onVerify}
+          className="w-full bg-[#7c3aed] text-white py-3.5 rounded-full font-bold text-[15px] shadow-lg shadow-violet-500/20 hover:bg-violet-600 transition-colors"
+        >
           Get Verified
         </button>
         <p className="text-[11px] text-gray-400 text-center font-medium uppercase tracking-tighter italic">Takes less than 60 seconds</p>
