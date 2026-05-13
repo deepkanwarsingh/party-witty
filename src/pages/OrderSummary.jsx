@@ -1,16 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import facecard_img from '../assets/Facecard_img.jpg';
 import wine from '../assets/wine.jpg';
 import zoe_miller from '../assets/Zoe_miller.jpg';
 
 const OrderSummary = () => {
+    const navigate = useNavigate();
     return (
         <div className="h-screen w-full overflow-hidden flex justify-center items-center bg-[radial-gradient(circle_at_0%_0%,rgba(216,208,255,0.4)_0%,transparent_50%),radial-gradient(circle_at_100%_100%,rgba(216,255,230,0.4)_0%,transparent_50%),radial-gradient(circle_at_100%_0%,rgba(255,248,220,0.3)_0%,transparent_50%),#fcfaff] p-3 box-border font-sans">
 
             <div className="w-full max-w-[760px] h-full max-h-screen flex flex-col gap-2 relative overflow-hidden">
 
                 <header className="flex justify-between items-center px-1 shrink-0">
-                    <button className="flex items-center gap-2.5 bg-white px-4 py-2 rounded-full font-bold text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] border-none cursor-pointer hover:bg-gray-50 transition-colors">
+                    <button 
+                        onClick={() => navigate('/buydrinks')}
+                        className="flex items-center gap-2.5 bg-white px-4 py-2 rounded-full font-bold text-sm shadow-[0_2px_8px_rgba(0,0,0,0.05)] border-none cursor-pointer hover:bg-gray-50 transition-colors"
+                    >
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5">
                             <path d="M19 12H5M12 19l-7-7 7-7" />
                         </svg>

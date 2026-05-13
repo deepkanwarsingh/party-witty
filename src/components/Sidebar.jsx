@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import facecard_img from '../assets/Facecard_img.jpg';
 import profile_bottom_stage from '../assets/profile_bottom_stage.png';
 import corporate_offer from '../assets/corporate_offer.png';
@@ -6,14 +7,14 @@ import corporate_offer from '../assets/corporate_offer.png';
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const navItems = [
-    { name: 'My Plan', icon: 'M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z' },
-    { name: 'My Bids', icon: 'M14.5 12.5L21 6M10 17l-5 5M6 13l4-4M16 3l4 4' },
-    { name: 'My Booking', icon: 'M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z' },
-    { name: 'Search', icon: 'M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z' },
-    { name: 'Chat Room', icon: 'M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' },
-    { name: 'Notifications', icon: 'M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' },
-    { name: 'Save & Like', icon: 'M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' },
-    { name: 'Rewards', icon: 'M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4M4 6v12c0 1.1.9 2 2 2h14v-4M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z' },
+    { name: 'My Plan', path: '/events', icon: 'M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z' },
+    { name: 'My Bids', path: '/', icon: 'M14.5 12.5L21 6M10 17l-5 5M6 13l4-4M16 3l4 4' },
+    { name: 'My Booking', path: '/buydrinks', icon: 'M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z' },
+    { name: 'Search', path: '#search', icon: 'M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z' },
+    { name: 'Chat Room', path: '#chat', icon: 'M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z' },
+    { name: 'Notifications', path: '#notifications', icon: 'M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' },
+    { name: 'Save & Like', path: '#save', icon: 'M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' },
+    { name: 'Rewards', path: '#rewards', icon: 'M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4M4 6v12c0 1.1.9 2 2 2h14v-4M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z' },
   ];
 
   return (
@@ -39,9 +40,9 @@ const Sidebar = () => {
 
       <nav className="flex flex-col gap-2 grow overflow-y-auto scrollbar-none">
         {navItems.map((item) => (
-          <a
+          <Link
             key={item.name}
-            href={`#${item.name.toLowerCase().replace(/\s/g, '-')}`}
+            to={item.path}
             className={`flex items-center gap-4 py-3 rounded-xl text-gray-500 font-medium transition-all duration-200 whitespace-nowrap hover:bg-violet-500/5 hover:text-[#7c3aed] ${isCollapsed ? 'px-3 justify-center' : 'px-4'}`}
             title={item.name}
           >
@@ -51,7 +52,7 @@ const Sidebar = () => {
               </svg>
             </div>
             {!isCollapsed && <span>{item.name}</span>}
-          </a>
+          </Link>
         ))}
       </nav>
 

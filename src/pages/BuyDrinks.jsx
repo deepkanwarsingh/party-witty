@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import DrinkCard from '../components/DrinkCard';
 import Verification from '../components/Verification';
@@ -15,6 +16,7 @@ import cosmopolitan from '../assets/cosmopolitan.jpg';
 import wine from '../assets/wine.jpg';
 
 const BuyDrinks = () => {
+    const navigate = useNavigate();
     const [isVerificationOpen, setIsVerificationOpen] = useState(false);
     const [isVerification2Open, setIsVerification2Open] = useState(false);
     const [isVerification3Open, setIsVerification3Open] = useState(false);
@@ -123,11 +125,12 @@ const BuyDrinks = () => {
                     <div className="flex-1 overflow-y-none scrollbar-none pr-2">
                         <div className="grid grid-cols-2 gap-5">
                             {drinks.map((drink, index) => (
-                                <DrinkCard
-                                    key={index}
-                                    {...drink}
-                                    isSelected={index === 0 || index === 4}
-                                />
+                                <Link key={index} to="/ordersummary" className="block no-underline">
+                                    <DrinkCard
+                                        {...drink}
+                                        isSelected={index === 0 || index === 4}
+                                    />
+                                </Link>
                             ))}
                         </div>
                     </div>

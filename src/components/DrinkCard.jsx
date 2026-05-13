@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DrinkCard = ({ name, price, desc, status, image, isSelected }) => {
+const DrinkCard = ({ name, price, desc, status, image, isSelected, onClick }) => {
   const getStatusColor = (statusText) => {
     const s = statusText.toLowerCase();
     if (s.includes('accepted')) return 'bg-[#dcfce7] text-[#16a34a]';
@@ -11,7 +11,10 @@ const DrinkCard = ({ name, price, desc, status, image, isSelected }) => {
   };
 
   return (
-    <div className={`flex bg-white rounded-[24px] overflow-hidden border transition-all duration-300 cursor-pointer relative h-[130px] group ${isSelected ? 'border-[#ff4d94] shadow-[0_10px_25px_rgba(255,77,148,0.15)]' : 'border-gray-100 hover:border-gray-200 hover:shadow-md'}`}>
+    <div 
+      onClick={onClick}
+      className={`flex bg-white rounded-[24px] overflow-hidden border transition-all duration-300 cursor-pointer relative h-[130px] group ${isSelected ? 'border-[#ff4d94] shadow-[0_10px_25px_rgba(255,77,148,0.15)]' : 'border-gray-100 hover:border-gray-200 hover:shadow-md'}`}
+    >
       <div className="w-[140px] h-full bg-gray-50 shrink-0">
         <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
       </div>
