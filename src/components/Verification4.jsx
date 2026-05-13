@@ -1,4 +1,7 @@
 import React from 'react';
+import slot_2_existing from '../assets/slot_2_existing.png';
+import slot_3_existing from '../assets/slot_3_existing.png';
+import slot_4_existing from '../assets/slot_4_existing.png';
 
 const Verification4 = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -59,9 +62,7 @@ const Verification4 = ({ isOpen, onClose }) => {
 
             {/* Slot 2: Photo Placeholder (Example with delete button) */}
             <div className="aspect-[3/4] bg-gray-400/30 rounded-[24px] relative overflow-hidden group">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Image Area</span>
-                </div>
+                <img src={slot_2_existing} alt="Slot 2" className="w-full h-full object-cover" />
                 <button className="absolute bottom-4 left-4 w-10 h-10 bg-red-500/80 rounded-full flex items-center justify-center shadow-lg hover:bg-red-500 transition-colors">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2.5">
                         <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
@@ -71,9 +72,7 @@ const Verification4 = ({ isOpen, onClose }) => {
 
             {/* Slot 3: Photo Placeholder */}
             <div className="aspect-[3/4] bg-gray-400/30 rounded-[24px] relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Image Area</span>
-                </div>
+                <img src={slot_3_existing} alt="Slot 3" className="w-full h-full object-cover" />
                 <button className="absolute bottom-4 left-4 w-10 h-10 bg-red-500/80 rounded-full flex items-center justify-center shadow-lg">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2.5">
                         <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
@@ -83,9 +82,7 @@ const Verification4 = ({ isOpen, onClose }) => {
 
             {/* Slot 4: Photo Placeholder */}
             <div className="aspect-[3/4] bg-gray-400/30 rounded-[24px] relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Image Area</span>
-                </div>
+                <img src={slot_4_existing} alt="Slot 4" className="w-full h-full object-cover" />
                 <button className="absolute bottom-4 left-4 w-10 h-10 bg-red-500/80 rounded-full flex items-center justify-center shadow-lg">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2.5">
                         <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />

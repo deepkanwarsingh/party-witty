@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import DrinkCard from '../components/DrinkCard';
+import Verification from '../components/Verification';
+import Verification2 from '../components/Verification2';
+import Verification3 from '../components/Verification3';
+import Verification4 from '../components/Verification4';
 import facecard_img from '../assets/Facecard_img.jpg';
 import MakeYourFirstMove from '../assets/MakeYourFirstMove.png';
 import Zoe_miller from '../assets/Zoe_miller.jpg';
@@ -11,6 +15,26 @@ import cosmopolitan from '../assets/cosmopolitan.jpg';
 import wine from '../assets/wine.jpg';
 
 const BuyDrinks = () => {
+    const [isVerificationOpen, setIsVerificationOpen] = useState(false);
+    const [isVerification2Open, setIsVerification2Open] = useState(false);
+    const [isVerification3Open, setIsVerification3Open] = useState(false);
+    const [isVerification4Open, setIsVerification4Open] = useState(false);
+
+    const handleStartVerification = () => {
+        setIsVerificationOpen(false);
+        setIsVerification2Open(true);
+    };
+
+    const handleFinishVerification = () => {
+        setIsVerification2Open(false);
+        setIsVerification3Open(true);
+    };
+
+    const handleGoToPhotos = () => {
+        setIsVerification3Open(false);
+        setIsVerification4Open(true);
+    };
+
     const drinks = [
         { name: 'Dry Martini', price: '999', desc: 'Mint, Lime, Electric Glow', status: 'MOST LIKELY TO GET ACCEPTED', image: dry_martini },
         { name: 'Cosmopolitan', price: '199', desc: 'Mint, Lime, Electric Glow', status: 'Essy Choose', image: cosmopolitan },
@@ -39,7 +63,10 @@ const BuyDrinks = () => {
                         </div>
                         <div className="flex flex-col gap-1">
                             <span className="text-lg font-bold text-gray-900 leading-none">Alen Markram</span>
-                            <button className="bg-[#ff4d94] text-white text-[11px] font-extrabold px-3 py-1 rounded-full w-fit shadow-sm">
+                            <button 
+                                onClick={() => setIsVerificationOpen(true)}
+                                className="bg-[#ff4d94] text-white text-[11px] font-extrabold px-3 py-1 rounded-full w-fit shadow-sm hover:scale-105 transition-transform"
+                            >
                                 Get Verified
                             </button>
                         </div>
@@ -147,6 +174,28 @@ const BuyDrinks = () => {
                     </div>
                 </div>
             </main>
+            <Verification
+                isOpen={isVerificationOpen}
+                onClose={() => setIsVerificationOpen(false)}
+                onVerify={handleStartVerification}
+            />
+
+            <Verification2
+                isOpen={isVerification2Open}
+                onClose={() => setIsVerification2Open(false)}
+                onFinish={handleFinishVerification}
+            />
+
+            <Verification3
+                isOpen={isVerification3Open}
+                onClose={() => setIsVerification3Open(false)}
+                onNext={handleGoToPhotos}
+            />
+
+            <Verification4
+                isOpen={isVerification4Open}
+                onClose={() => setIsVerification4Open(false)}
+            />
         </div>
     );
 };

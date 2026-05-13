@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import facecard_img from '../assets/Facecard_img.jpg';
 import profile_bottom_stage from '../assets/profile_bottom_stage.png';
+import corporate_offer from '../assets/corporate_offer.png';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -44,9 +45,11 @@ const Sidebar = () => {
             className={`flex items-center gap-4 py-3 rounded-xl text-gray-500 font-medium transition-all duration-200 whitespace-nowrap hover:bg-violet-500/5 hover:text-[#7c3aed] ${isCollapsed ? 'px-3 justify-center' : 'px-4'}`}
             title={item.name}
           >
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
-              <path d={item.icon} />
-            </svg>
+            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-70">
+                <path d={item.icon} />
+              </svg>
+            </div>
             {!isCollapsed && <span>{item.name}</span>}
           </a>
         ))}
@@ -63,8 +66,8 @@ const Sidebar = () => {
         </div>
 
         {!isCollapsed && (
-          <div className="w-full h-[60px] bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden relative">
-            <img src={facecard_img} alt="Promo Banner" className="w-full h-full object-cover" />
+          <div className="w-full h-content m-0 bg-gradient-to-br from-slate-800 to-slate-900 rounded-none overflow-hidden relative">
+            <img src={corporate_offer} alt="Promo Banner" className="w-full h-full object-contain" />
           </div>
         )}
 
@@ -80,7 +83,7 @@ const Sidebar = () => {
           )}
           {!isCollapsed && (
             <div className="text-gray-500 flex-shrink-0">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7 17l9.2-9.2M17 17V7H7" />
               </svg>
             </div>

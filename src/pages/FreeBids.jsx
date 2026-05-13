@@ -7,7 +7,6 @@ import Verification from '../components/Verification';
 import Verification2 from '../components/Verification2';
 import Verification3 from '../components/Verification3';
 import Verification4 from '../components/Verification4';
-import './FreeBids.css';
 
 const FreeBids = () => {
   const [isGoTonightOpen, setIsGoTonightOpen] = useState(false);
@@ -37,9 +36,9 @@ const FreeBids = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="flex h-screen w-full overflow-hidden">
       <Sidebar />
-      <main className="main-content">
+      <main className="flex-1 h-screen overflow-y-auto flex justify-center bg-transparent scrollbar-none">
         <FaceCard onGoTonight={() => setIsGoTonightOpen(true)} />
       </main>
       <RightSidebar onVerify={() => setIsVerificationOpen(true)} />

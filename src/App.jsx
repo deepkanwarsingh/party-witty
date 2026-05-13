@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Freebids" element={<FreeBids />} />
+        <Route path="/" element={<FreeBids />} />
         <Route path="/events" element={<EventListing />} />
         <Route path="/buydrinks" element={<BuyDrinks />} />
         <Route path="/ordersummary" element={<OrderSummary />} />
         {/* Default route redirects to FreeBids */}
-        <Route path="/" element={<Navigate to="/Freebids" replace />} />
+        {/* <Route path="/" element={<Navigate to="/Freebids" replace />} /> */}
       </Routes>
     </Router>
   );
