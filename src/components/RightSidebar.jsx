@@ -1,5 +1,5 @@
 import React from 'react';
-import HowitWorks from '../assets/HowitWorks.jpg';
+import HowItWorks from '../assets/HowItWorks.jpg';
 import MakeYourFirstMove from '../assets/MakeYourFirstMove.png';
 
 const RightSidebar = ({ onVerify }) => {
@@ -32,7 +32,7 @@ const RightSidebar = ({ onVerify }) => {
           {steps.map((step) => (
             <div key={step.id} className="flex gap-4 group">
               <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden shadow-sm">
-                <img src={HowitWorks} alt={`Step ${step.id}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={HowItWorks} alt={`Step ${step.id}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <span className="absolute top-1.5 left-1.5 bg-[#7c3aed] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm">
                   {step.id}
                 </span>
@@ -65,7 +65,7 @@ const RightSidebar = ({ onVerify }) => {
       </div>
 
       <div className="flex flex-col gap-3 mt-auto pt-4">
-        <button 
+        <button
           onClick={onVerify}
           className="w-full bg-[#7c3aed] text-white py-3.5 rounded-full font-bold text-[15px] shadow-lg shadow-violet-500/20 hover:bg-violet-600 transition-colors"
         >
